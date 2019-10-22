@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   
+  before_action :authenticate, only: [:admin, :new, :create, :edit, :update, :destroy]
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -46,6 +47,10 @@ class PostsController < ApplicationController
     redirect_to root_path, notice: "Post destroyed."
   end
 
+  def admin
+    redirect_to root_path if authenticate
+  end
+
   private
 
   def post_params
@@ -54,5 +59,15 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      admin_username = Rails.application.secrets.admin_username
+      admin_password = Rails.application.secrets.admin_password
+      username == admin_username && password == admin_password
+    end
   end
 end
