@@ -1,3 +1,4 @@
+<%= image_tag @post.image_url.to_s, alt: "image" %>
 <h1><%= @post.title %></h1>
 <p><%= @post.content %></p>
 <%= link_to "Edit", edit_post_path(@post) %>
