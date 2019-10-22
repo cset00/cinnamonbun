@@ -10,3 +10,5 @@ Category.create(name: 'engineering')
 Category.create(name: 'tvshows')
 Category.create(name: 'movies')
 Category.create(name: 'books')
+Category.create(name: 'other')
+
