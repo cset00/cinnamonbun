@@ -1,0 +1,8 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#11aa77",
+    "titleBar.activeForeground": "#ffffff",
+    "editorLineNumber.foreground": "#999999"
+  },
+  "files.insertFinalNewline": true
+}
