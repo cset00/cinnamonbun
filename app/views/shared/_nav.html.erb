@@ -1,3 +1,9 @@
+<% if session[:admin] then %>
+  <%= link_to new_post_path do %>
+    <span> <%= "Add new post here" %> </span>
+  <% end %>
+<% end %>
+
 <% Category.all.each do |category| %>
   <li>
     <%= link_to category.name, posts_path(category: category.name) %>

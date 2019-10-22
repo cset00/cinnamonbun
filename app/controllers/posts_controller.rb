@@ -67,7 +67,7 @@ class PostsController < ApplicationController
     authenticate_or_request_with_http_basic do |username, password|
       admin_username = Rails.application.secrets.admin_username
       admin_password = Rails.application.secrets.admin_password
-      username == admin_username && password == admin_password
+      session[:admin] = true if (username == admin_username && password == admin_password)
     end
   end
 end
