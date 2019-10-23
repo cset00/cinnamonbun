@@ -12,3 +12,6 @@ Category.create(name: 'movies')
 Category.create(name: 'books')
 Category.create(name: 'other')
 
+Post.create(title: 'Cinnamon Bun', content: 'Yum', category_id: 1)
+Post.create(title: 'So pro', content: 'yolololo', category_id: 2)
+Post.create(title: 'Hello', content: 'world aaaa', category_id: 3)
