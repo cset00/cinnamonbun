@@ -1,3 +1,5 @@
+<%= react_component "HelloReact", posts: @posts, admin: session[:admin] %>
+
 <% @posts.each do |post| %>
   <%= image_tag post.image_url.to_s %>
   <h1><%= link_to "#{post.title}", post %></h1>
