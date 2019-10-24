@@ -8,8 +8,8 @@ import PropTypes from "prop-types";
 
 const Hello = props => <div>Hello {props.posts[0].title}!</div>;
 
-Hello.defaultProps = {
-  name: "Whatever"
-};
+// Hello.defaultProps = {
+//   name: "Whatever"
+// };
 
 export default Hello;

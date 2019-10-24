@@ -1,4 +1,4 @@
-<%= react_component "HelloReact", posts: @posts, admin: session[:admin] %>
+<%#= react_component "HelloReact", posts: @posts, admin: session[:admin] %>
 
 <% @posts.each do |post| %>
   <%= image_tag post.image_url.to_s %>
